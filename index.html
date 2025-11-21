@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Colorful eCommerce</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>BEC ECOMMERCE</h1>
+    <div class="header-controls">
+      <input type="text" id="searchInput" placeholder="Search products..." onkeyup="filterProducts()" />
+      <select id="categoryFilter" onchange="filterProducts()">
+        <option value="all">All Categories</option>
+        <option value="electronics">Electronics</option>
+        <option value="fashion">Fashion</option>
+        <option value="shoes">Shoes</option>
+      </select>
+      <button onclick="toggleLoginModal()">Login</button>
+      <button class="cart-btn" onclick="showCart()">🛒 Cart (0)</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>Welcome to ShopNow</h2>
+    <p>Discover colorful fashion and tech at unbeatable prices.</p>
+  </section>
+
+  <section class="products" id="productList">
+    <!-- Product cards -->
+    <div class="product" data-name="Smartwatch Pro" data-category="electronics">
+      <img src="smartwatch.jpg" alt="Smartwatch">
+      <div class="product-info">
+        <h3>Smartwatch Pro</h3>
+        <span>$120</span>
+        <button onclick="addToCart('Smartwatch Pro')">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product" data-name="Wireless Headphones" data-category="electronics">
+      <img src="wire.webp" alt="Headphones">
+      <div class="product-info">
+        <h3>Wireless Headphones</h3>
+        <span>$80</span>
+        <button onclick="addToCart('Wireless Headphones')">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product" data-name="Color Pop Sneakers" data-category="shoes">
+      <img src="shoes.jfif" alt="Sneakers">
+      <div class="product-info">
+        <h3>Color Pop Sneakers</h3>
+        <span>$60</span>
+        <button onclick="addToCart('Color Pop Sneakers')">Add to Cart</button>
+      </div>
+    </div>
+
+    <div class="product" data-name="Trendy Jacket" data-category="fashion">
+      <img src="jacket.avif" alt="Jacket">
+      <div class="product-info">
+        <h3>Trendy Jacket</h3>
+        <span>$95</span>
+        <button onclick="addToCart('Trendy Jacket')">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 ShopNow. All rights reserved.
+  </footer>
+
+  <!-- Login Modal -->
+  <div id="loginModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="toggleLoginModal()">&times;</span>
+      <h2>Login / Signup</h2>
+      <input type="text" placeholder="Email" />
+      <input type="password" placeholder="Password" />
+      <button>Login</button>
+      <p>Don't have an account? <a href="#">Sign up</a></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

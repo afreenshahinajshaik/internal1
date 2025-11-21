@@ -1,0 +1,74 @@
+/* Header controls */
+
+body {
+    background-image: url('BACK.jpeg'); /* or use an online URL */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+  }
+.header-controls {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+  }
+  
+  .header-controls input, .header-controls select {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+  }
+  
+  /* Modal styles */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  
+  .modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .modal-content h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .modal-content input {
+    width: 100%;
+    padding: 0.7rem;
+    margin: 0.5rem 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .modal-content button {
+    width: 100%;
+    padding: 0.7rem;
+    background: #833ab4;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  .close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  
